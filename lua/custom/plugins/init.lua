@@ -26,4 +26,9 @@ return {
       { '<leader>st', '<cmd>lua require("telescope").extensions.vstask.tasks()<cr>', desc = 'Open VSCode Tasks' },
     },
   },
+  {
+    'nvim-tree/nvim-web-devicons',
+    lazy = false,
+    enabled = true,
+  },
 }
