@@ -160,6 +160,10 @@ vim.opt.scrolloff = 10
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
+-- Stop indentation from deselecting text by automatically reselecting previous selection
+vim.api.nvim_set_keymap('v', '>', '>gv', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', '<', '<gv', { noremap = true, silent = true })
+
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
